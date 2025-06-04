@@ -1,0 +1,28 @@
+name: Deploy PR Preview
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Build static site (no build step needed)
+        run: |
+          mkdir dist
+          cp index.html dist/
+          cp style.css dist/
+
+      - name: Deploy to GitHub Pages under subpath
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          destination_dir: pr-preview/pr-${{ github.event.pull_request.number }}
+          publish_branch: gh-pages
+
+Add PR preview GitHub Action
