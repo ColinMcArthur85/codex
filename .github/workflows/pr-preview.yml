@@ -33,4 +33,4 @@ jobs:
           header: preview-link
           message: |
             🚀 **Preview your changes here**:
-            https://ColinMcArthur85.github.io/codex/previews/pr-${{ github.event.pull_request.number }}/
+            https://ColinMcArthur85.github.io/codex/pr-${{ github.event.pull_request.number }}/
