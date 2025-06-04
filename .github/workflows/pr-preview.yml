@@ -11,18 +11,20 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Build static site (no build step needed)
-        run: |
-          mkdir dist
-          cp index.html dist/
-          cp style.css dist/
+      - name: Get PR number
+        id: pr
+        run: echo "PR_NUM=${{ github.event.pull_request.number }}" >> $GITHUB_ENV
 
-      - name: Deploy to GitHub Pages under subpath
+      - name: Build static site
+        run: |
+          mkdir -p previews/pr-${PR_NUM}
+          cp index.html style.css previews/pr-${PR_NUM}/
+
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          destination_dir: pr-preview/pr-${{ github.event.pull_request.number }}
+          publish_dir: ./previews
           publish_branch: gh-pages
 
       - name: Comment preview URL on PR
@@ -31,7 +33,4 @@ jobs:
           header: preview-link
           message: |
             🚀 **Preview your changes here**:
-            https://colinmcarthur85.github.io/codex/pr-preview/pr-${{ github.event.pull_request.number }}/
-
-
-Add PR preview GitHub Action
+            https://ColinMcArthur85.github.io/codex/previews/pr-${{ github.event.pull_request.number }}/
