@@ -25,4 +25,13 @@ jobs:
           destination_dir: pr-preview/pr-${{ github.event.pull_request.number }}
           publish_branch: gh-pages
 
+      - name: Comment preview URL on PR
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          header: preview-link
+          message: |
+            🚀 **Preview your changes here**:
+            https://colinmcarthur85.github.io/codex/pr-preview/pr-${{ github.event.pull_request.number }}/
+
+
 Add PR preview GitHub Action
