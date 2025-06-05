@@ -5,3 +5,31 @@ h1 {
 body {
     background-color: #f9fafb;
 }
+
+/* Navigation styles */
+.nav-link {
+    color: #4b5563; /* text-gray-700 */
+    padding: 0.5rem 0.75rem;
+    display: block;
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    color: #111827; /* text-gray-900 */
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 0.5rem;
+    min-width: 10rem;
+    z-index: 50;
+}
+
+.group:hover > .dropdown-menu {
+    display: block;
+}
