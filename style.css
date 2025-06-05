@@ -11,6 +11,7 @@ body {
     color: #4b5563; /* text-gray-700 */
     padding: 0.5rem 0.75rem;
     display: block;
+    cursor: pointer;
 }
 
 .nav-link:hover {
