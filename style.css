@@ -33,3 +33,28 @@ body {
 .group:hover > .dropdown-menu {
     display: block;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Mini menu styles */
+.mini-menu {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.mini-menu a {
+    color: #4b5563;
+    padding: 0.5rem 1rem;
+    display: block;
+}
+
+.mini-menu a.active {
+    color: #111827;
+    font-weight: 600;
+    border-bottom: 2px solid #6366f1;
+}
