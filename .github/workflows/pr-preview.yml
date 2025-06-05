@@ -18,7 +18,7 @@ jobs:
       - name: Build static site
         run: |
           mkdir -p previews/pr-${PR_NUM}
-          cp index.html style.css previews/pr-${PR_NUM}/
+          cp index.html style.css script.js previews/pr-${PR_NUM}/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
