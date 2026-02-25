@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Hello</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div id="top"></div>
+    <!-- Navigation -->
+    <nav class="bg-white shadow navbar-shadow">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="font-bold text-xl">MyLogo</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#" class="nav-link">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <div class="relative group">
+                        <button class="nav-link focus:outline-none">Courses</button>
+                        <div class="dropdown-menu">
+                            <a href="#course1" class="nav-link">Course 1</a>
+                            <a href="#course2" class="nav-link">Course 2</a>
+                            <a href="#course3" class="nav-link">Course 3</a>
+                        </div>
+                    </div>
+                    <a href="#contact" class="px-3 py-2 rounded-md text-white bg-indigo-600 hover:bg-indigo-700">Contact Me</a>
+                </div>
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-button" type="button" class="nav-link focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden px-2 pt-2 pb-3 space-y-1">
+            <a href="#" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <button id="mobile-courses-button" type="button" class="nav-link flex justify-between items-center w-full">
+                <span>Courses</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </button>
+            <div id="mobile-courses-dropdown" class="hidden pl-4 space-y-1">
+                <a href="#course1" class="nav-link">Course 1</a>
+                <a href="#course2" class="nav-link">Course 2</a>
+                <a href="#course3" class="nav-link">Course 3</a>
+            </div>
+            <a href="#contact" class="nav-link bg-indigo-600 text-white rounded-md">Contact Me</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-white">
+        <div class="max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl font-extrabold text-gray-900 sm:text-5xl lg:text-6xl">
+                Welcome to My Project
+            </h1>
+            <p class="mt-6 text-lg leading-8 text-gray-600">
+                Build modern websites quickly with Tailwind CSS.
+            </p>
+            <div class="mt-8 flex justify-center">
+                <a href="#" class="inline-block px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700">
+                    Get Started
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- In-page Mini Menu -->
+    <nav id="mini-menu" class="mini-menu">
+        <ul class="flex justify-center space-x-4">
+            <li><a href="#plans">Plans</a></li>
+            <li><a href="#benefits">Benefits</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#whats-included">What's Included</a></li>
+            <li><a href="#faq">FAQ</a></li>
+        </ul>
+    </nav>
+
+    <!-- Plans Section -->
+    <section id="plans" data-section class="bg-white">
+        <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold text-gray-900">Plans</h2>
+            <p class="mt-4 text-lg text-gray-600">Choose the plan that fits your needs.</p>
+            <p class="mt-2 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pretium ipsum nec leo imperdiet, in faucibus dui blandit. Donec in semper velit. Sed vitae purus aliquet, elementum neque eu, tempor metus.</p>
+            <p class="mt-2 text-gray-600">Curabitur non ante vel diam blandit vehicula. Praesent dignissim justo ut suscipit euismod. Donec eget massa sed turpis faucibus efficitur. In hac habitasse platea dictumst.</p>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" data-section class="bg-gray-50">
+        <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold text-gray-900">Benefits</h2>
+            <p class="mt-4 text-lg text-gray-600">Discover what you gain by working with us.</p>
+            <p class="mt-2 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur, lorem sed laoreet sagittis, mi felis posuere justo, ut vulputate tellus nisl quis risus.</p>
+            <p class="mt-2 text-gray-600">Aliquam erat volutpat. Nulla facilisi. Donec accumsan libero at lectus consequat, et dapibus enim sollicitudin. Pellentesque habitant morbi tristique senectus et netus.</p>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" data-section class="bg-white">
+        <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold text-gray-900">How It Works</h2>
+            <p class="mt-4 text-lg text-gray-600">A simple explanation of our process.</p>
+            <p class="mt-2 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in elit sed quam ullamcorper feugiat. Etiam sed bibendum metus, ac blandit leo.</p>
+            <p class="mt-2 text-gray-600">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed at magna quis nulla feugiat cursus.</p>
+        </div>
+    </section>
+
+    <!-- What's Included Section -->
+    <section id="whats-included" data-section class="bg-gray-50">
+        <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold text-gray-900">What's Included</h2>
+            <p class="mt-4 text-lg text-gray-600">See everything that comes in the package.</p>
+            <p class="mt-2 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id dui vitae velit venenatis sagittis. Mauris lacinia varius mauris, non facilisis nulla malesuada vitae.</p>
+            <p class="mt-2 text-gray-600">Nunc et turpis eu dolor sollicitudin cursus. Nam gravida, mauris nec efficitur faucibus, sem sapien sagittis elit, a luctus nisi risus at ipsum.</p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" data-section class="bg-white">
+        <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold text-gray-900">FAQ</h2>
+            <p class="mt-4 text-lg text-gray-600">Frequently asked questions.</p>
+            <p class="mt-2 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras porta, massa at consectetur finibus, elit sapien fringilla sem, et condimentum nisl velit a justo.</p>
+            <p class="mt-2 text-gray-600">Suspendisse potenti. Sed non lacus non ipsum sollicitudin pharetra. Nunc bibendum, arcu id rhoncus efficitur, metus libero bibendum sapien, sed scelerisque elit nisi ut ligula.</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-gray-50">
+        <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h2 class="text-3xl font-extrabold text-gray-900">About Me</h2>
+                    <p class="mt-4 text-lg text-gray-600">
+                        I am a passionate developer who loves building responsive and
+                        interactive web experiences using modern tools like Tailwind
+                        CSS.
+                    </p>
+                    <p class="mt-2 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget interdum justo. Integer convallis sollicitudin metus, vel tempor elit viverra in.</p>
+                    <p class="mt-2 text-gray-600">Phasellus non massa in sapien consequat egestas. Vivamus at urna quis ipsum ullamcorper viverra quis id urna.</p>
+                </div>
+                <div class="flex justify-center">
+                    <img src="https://placekitten.com/400/300" alt="About me" class="rounded-lg shadow-lg" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
