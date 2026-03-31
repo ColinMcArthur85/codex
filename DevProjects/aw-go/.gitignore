@@ -1,0 +1,10 @@
+.agents/
+.claude/
+.gemini/
+.vscode/
+CLAUDE.md
+GEMINI.md
+agents.md
+docs/
+framework/
+.DS_Store
